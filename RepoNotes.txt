@@ -1,6 +1,6 @@
 ------ Introduction --------
 This textfile summarises the content in the Github Repository, my own codes, inspiring codes, interesting and confusing concepts and a summary. 
-As part of the research required in the assignment requirements I have looked at a few tutorials on how chatbots are created. 
+As part of the assignment requirements, I have done research of a few tutorials on how chatbots are created. 
 Chatbots range from text-only or more complex verions have also integrated AI abilities.
 
 
