@@ -29,10 +29,10 @@ def find_best_match(user_question: str, questions: list[str]) -> Union[str, None
 
 
 # function to answer each question
-def get_answer_for_question(question: str, knowledge_base: dict) -> Union[str, None]:
-    for q in knowledge_base["questions"]:
-        if q["question"] == question:
-            return q["answer"]
+def get_answer_for_question(question: str, knowledge_base: dict) -> Union[str, None]:       # function to find the answer to a given question from a given knwoledge base
+    for q in knowledge_base["questions"]:                                                   # loop over all question-answer pair in the knowledge base
+        if q["question"] == question:                                                       # check if the current question in the loop matches the user's question
+            return q["answer"]                                                              # if not match is found, function will return "None" by default
 
 # chat_bot() function
 def chat_bot():
