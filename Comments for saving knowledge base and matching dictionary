@@ -34,7 +34,6 @@ def get_answer_for_question(question: str, knowledge_base: dict) -> Union[str, N
         if q["question"] == question:
             return q["answer"]
 
-
 # chat_bot() function
 def chat_bot():
     knowledge_base: dict = load_knowledge_base('knowledge_base.json')
