@@ -35,29 +35,29 @@ def get_answer_for_question(question: str, knowledge_base: dict) -> Union[str, N
             return q["answer"]                                                              # if not match is found, function will return "None" by default
 
 # chat_bot() function
-def chat_bot():
-    knowledge_base: dict = load_knowledge_base('knowledge_base.json')
+def chat_bot():                                                                             # function to run the chatbot in a continuous interaction loop
+    knowledge_base: dict = load_knowledge_base('knowledge_base.json')                       # load the JSON file, which contains the existing knowledge base
 
-    while True:                                 # create infinite loop
-        user_input: str = input('You: ')
+    while True:                                                                             # create infinite loop to interact continuously with the user
+        user_input: str = input('You: ')                                                    # user input
 
-        if user_input.lower() == 'quit':
+        if user_input.lower() == 'quit':                                                    # when user types 'quit', terminate chat
             break
 
-        best_match: Union[str, None] = find_best_match(user_input, [q["question"] for q in knowledge_base["questions"]])
+        best_match: Union[str, None] = find_best_match(user_input, [q["question"] for q in knowledge_base["questions"]])        # find the closest match to the user's question from the knowledge base
 
-        if best_match:
-            answer: str = get_answer_for_question(best_match, knowledge_base)
-            print(f'Bot: {answer}')
+        if best_match:                                                                       
+            answer: str = get_answer_for_question(best_match, knowledge_base)               
+            print(f'Bot: {answer}')                                                         # if a best match is found, retrieve and display answer
         else:
-            print('Bot: I don\'t know the answer. Can you teach me?')
+            print('Bot: I don\'t know the answer. Can you teach me?')                       # if no match is found, prompt user to 'teach' correct response
             new_answer: str = input('Type the answer or "skip" to skip: ')
 
             if new_answer.lower() != 'skip':
-                knowledge_base["questions"].append({"question": user_input, "answer": new_answer})
+                knowledge_base["questions"].append({"question": user_input, "answer": new_answer})  # if user provides an answer, add it to the knowledge base and save it
                 save_knowledge_base('knowledge_base.json', knowledge_base)
                 print('Bot: Thank you! I learned a new response!')
 
 
-if __name__ == '__main__':
+if __name__ == '__main__':          # run the chat_bot function when script is executed
     chat_bot()
