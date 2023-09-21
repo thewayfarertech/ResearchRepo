@@ -1,6 +1,32 @@
-main.py
-The codes in the python file are not mine but, from a tutorial, as part of my research.
-Below is the analysis of the overall code:
+------ Introduction --------
+
+Chatbots range from text-only or more complex verions have also integrated AI abilities.
+As part of tmy research, I looked at some tutorials of different Python programmers creating their versions of chatbots.
+
+
+
+------ My Own Codes --------
+
+
+
+
+------ Inspiring Codes --------
+The codes in the python and JSON files came from this tutorial: 
+Source:["How To Build A Chat Bot That Learns From The User In Python Tutorial"] (https://www.youtube.com/watch?v=CkkjXTER2KE&t=187s&ab_channel=Indently)
+
+
+
+
+
+------ Interesting or Confusing Concepts --------
+
+
+
+
+
+------ Summary --------
+
+
 
 Chatbots main framework:
 1) Create knowledge base from a JSON file
