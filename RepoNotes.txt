@@ -1,0 +1,16 @@
+main.py
+The codes in the python file are not mine but, from a tutorial, as part of my research.
+Below is the analysis of the overall code:
+
+Chatbots main framework:
+1) Create knowledge base from a JSON file
+2) Save dictionary to knowledge base
+3) Database of historical questions and answers that are updated in real-time
+4) Finding best match from dictionary
+5) Function to answer each question
+6) Chatbot function
+
+The chatbot is able to catalogue past conversations between bot and user, in the JSON file
+When opening the chatbot again, the chatbot would withdraw from the JSON file
+The chatbot learns new responses by prompting the user to teach it.
+
