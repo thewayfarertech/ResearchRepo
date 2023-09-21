@@ -1,7 +1,10 @@
 ------ Introduction --------
 This textfile summarises the content in the Github Repository, my own codes, inspiring codes, interesting and confusing concepts and a summary. 
-As part of the assignment requirements, I have done research of a few tutorials on how chatbots are created. 
+As part of the assignment requirements, I have done looked at few tutorials on how chatbots are created. 
 Chatbots range from text-only or more complex verions have also integrated AI abilities.
+
+The analysis is done on one of the chatbot tutorials that I selected. 
+The Python script and JSON files in the PythonScriptChatbot.py and knowledge_base.json, respectively, are not created by me. 
 
 
 All the files can be found in my GitHub Repository, namely:
