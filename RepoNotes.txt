@@ -1,11 +1,12 @@
 ------ Introduction --------
 This textfile summarises the content in the Github Repository, my own codes, inspiring codes, interesting and confusing concepts and a summary. 
-As part of the assignment requirements, I have done looked at few tutorials on how chatbots are created. 
+As part of the assignment requirements, I have looked at few tutorials on how chatbots are created. 
 Chatbots range from text-only or more complex verions have also integrated AI abilities.
 
 The analysis is done on one of the chatbot tutorials that I selected. 
-The Python script and JSON files in the PythonScriptChatbot.py and knowledge_base.json, respectively, are not created by me. 
-
+The Python script and JSON files in PythonScriptChatbot.py and knowledge_base.json, respectively, were from a Youtube tutorial. 
+The codes in the python and JSON files came from this tutorial: 
+Source:["How To Build A Chat Bot That Learns From The User In Python Tutorial"] (https://www.youtube.com/watch?v=CkkjXTER2KE&t=187s&ab_channel=Indently)
 
 All the files can be found in my GitHub Repository, namely:
 1. PythonScriptChatbot.py
@@ -17,14 +18,15 @@ All the files can be found in my GitHub Repository, namely:
 
 
 ------ My Own Codes --------
-
+List out questions and answers 
+Function to track number of questions and answers
 
 
 
 ------ Inspiring Codes --------
-The codes in the python and JSON files came from this tutorial: 
-Source:["How To Build A Chat Bot That Learns From The User In Python Tutorial"] (https://www.youtube.com/watch?v=CkkjXTER2KE&t=187s&ab_channel=Indently)
-
+The tutorial used Python codes beyond the scope of the syllabus. 
+I was most impressed about how the chatbot was able to understand natural language processing, when the bot matches as closely as possible to the user input.
+get_close_matches and find_best_match
 
 
 

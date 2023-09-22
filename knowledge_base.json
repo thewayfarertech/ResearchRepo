@@ -1,5 +1,48 @@
 {
-    "questions": [
-  
-    ]
-  }
+  "questions": [
+    {
+      "question": "",
+      "answer": "\"How are you?\""
+    },
+    {
+      "question": "Hello",
+      "answer": "Yes"
+    },
+    {
+      "question": "How are you",
+      "answer": "\"How are you?\""
+    },
+    {
+      "question": "",
+      "answer": ""
+    },
+    {
+      "question": "skip",
+      "answer": "How are you?"
+    },
+    {
+      "question": "",
+      "answer": "What is the weather like?"
+    },
+    {
+      "question": "What is the weather like?",
+      "answer": "The weather is GOOD"
+    },
+    {
+      "question": "I am fine thank you",
+      "answer": "That is good"
+    },
+    {
+      "question": "How many apples do you have?",
+      "answer": "I have five apples."
+    },
+    {
+      "question": "Yes",
+      "answer": "I am fine"
+    },
+    {
+      "question": "git aa . && git commit -m \"add own codes\" && git push",
+      "answer": "t"
+    }
+  ]
+}
