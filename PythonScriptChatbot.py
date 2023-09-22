@@ -87,7 +87,7 @@ def chat_bot():                                                                 
                     save_knowledge_base('knowledge_base.json', knowledge_base)          # add new question-answer pair in knowledge base and save it
                     print('Bot: Thank you! I learned a new response!')                  # print the response message
 
-########### MY CUSTOMISED CODES END HERE #########################
+########### MY CUSTOMISED CODES END HERE ##########################
 
 
 
