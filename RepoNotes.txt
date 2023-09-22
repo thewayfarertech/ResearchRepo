@@ -13,7 +13,7 @@ All the files can be found in my GitHub Repository, namely:
 2. knowledge_base.json
 3. RepoNotes.txt
 
-
+GitHub Repository Link: https://github.com/thewayfarertech/ResearchRepo.git
 
 ------ My Own Codes --------
 I have customised the chatbot script from the tutorial to have the ability to list out questions and answers present in the knowledge base.
