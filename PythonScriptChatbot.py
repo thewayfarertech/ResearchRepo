@@ -34,28 +34,28 @@ def get_answer_for_question(question: str, knowledge_base: dict) -> Union[str, N
         if q["question"] == question:                                                       # check if the current question in the loop matches the user's question
             return q["answer"]                                                              # if not match is found, function will return "None" by default
 
-# BELOW IS THE NEW CODE
-# Display a list of questions
-def list_all_questions(knowledge_base: dict):
+# BELOW IS THE NEW, MY OWN CODES
+# Display a list of questions from knowledge base
+def list_all_questions(knowledge_base: dict):                                           # extract questions list from the knowledge base
     questions = knowledge_base["questions"]
     print("List of Questions:")
-    for index, qa_pair in enumerate(questions, start=1):                                # question and answer pairs in the dictionary
-        print(f"{index}. {qa_pair['question']}")
+    for index, qa_pair in enumerate(questions, start=1):                                # enumerate through the dictionary list of question-and-answer pairs
+        print(f"{index}. {qa_pair['question']}")                                        # print each question
 
-# Display a list of answers
-def list_all_answers(knowledge_base: dict):
+# Display a list of answers from knowledge base
+def list_all_answers(knowledge_base: dict):                                             # extract questions list from the knowledge base
     questions = knowledge_base["questions"]
     print("List of Answers:")
-    for index, qa_pair in enumerate(questions, start=1):
-        print(f"{index}. {qa_pair['answer']}")
+    for index, qa_pair in enumerate(questions, start=1):                                # enumerate through the dictionary list of question-and-answer pairs
+        print(f"{index}. {qa_pair['answer']}")                                          # print each answer
 
 # Count the total number of questions or answers
-def count_questions_and_answers(knowledge_base: dict):
+def count_questions_and_answers(knowledge_base: dict):                                  # extract questions list from the knowledge base
     questions = knowledge_base["questions"]
-    total_questions = len(questions)
+    total_questions = len(questions)                                                    # count the total number of questions and answers
     total_answers = sum(1 for q in questions if "answer" in q)
-    print(f"Total Questions: {total_questions}")
-    print(f"Total Answers: {total_answers}")
+    print(f"Total Questions: {total_questions}")                                        # display total number of questions
+    print(f"Total Answers: {total_answers}")                                            # display total number of answers
 
 def chat_bot():
     knowledge_base: dict = load_knowledge_base('knowledge_base.json')
@@ -90,8 +90,7 @@ def chat_bot():
 
 
 
-
-# BELOW IS THE ORIGINAL CODE
+# BELOW IS THE ORIGINAL CODE FROM YOUTUBE
 # # chat_bot() function
 # def chat_bot():                                                                             # function to run the chatbot in a continuous interaction loop
 #     knowledge_base: dict = load_knowledge_base('knowledge_base.json')                       # load the JSON file, which contains the existing knowledge base
