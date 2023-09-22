@@ -43,6 +43,18 @@
     {
       "question": "git aa . && git commit -m \"add own codes\" && git push",
       "answer": "t"
+    },
+    {
+      "question": "\u001b[A",
+      "answer": ""
+    },
+    {
+      "question": "",
+      "answer": ""
+    },
+    {
+      "question": "",
+      "answer": "\u001b\u001b"
     }
   ]
 }

@@ -1,7 +1,7 @@
 ------ Introduction --------
-This textfile summarises the content in the Github Repository, my own codes, inspiring codes, interesting and confusing concepts and a summary. 
-As part of the assignment requirements, I have looked at few tutorials on how chatbots are created. 
-Chatbots range from text-only or more complex verions have also integrated AI abilities.
+This textfile summarises the content in the Github Repository: codes from external sources, my own codes, inspiring codes, interesting and confusing concepts and a summary. 
+As part of the assignment requirements, I have looked at some tutorials on how chatbots are created. 
+Chatbots range from text-only or more complex versions have also integrated AI abilities.
 
 The analysis is done on one of the chatbot tutorials that I selected. 
 The Python script and JSON files in PythonScriptChatbot.py and knowledge_base.json, respectively, were from a Youtube tutorial. 
@@ -15,41 +15,70 @@ All the files can be found in my GitHub Repository, namely:
 
 
 
-
-
 ------ My Own Codes --------
-List out questions and answers 
-Function to track number of questions and answers
+I have customised the chatbot script from the tutorial to have the ability to list out questions and answers present in the knowledge base.
+It also has a function to track the total number of questions and answers in the JSON file. The codes are shown as below:
+
+# Display a list of questions
+def list_all_questions(knowledge_base: dict):
+    questions = knowledge_base["questions"]
+    print("List of Questions:")
+    for index, qa_pair in enumerate(questions, start=1):
+        print(f"{index}. {qa_pair['question']}")
+
+# Display a list of answers
+def list_all_answers(knowledge_base: dict):
+    questions = knowledge_base["questions"]
+    print("List of Answers:")
+    for index, qa_pair in enumerate(questions, start=1):
+        print(f"{index}. {qa_pair['answer']}")
+
+# Count the total number of questions or answers
+def count_questions_and_answers(knowledge_base: dict):
+    questions = knowledge_base["questions"]
+    total_questions = len(questions)
+    total_answers = sum(1 for q in questions if "answer" in q)
+    print(f"Total Questions: {total_questions}")
+    print(f"Total Answers: {total_answers}")
+
+def chat_bot():
+    knowledge_base: dict = load_knowledge_base('knowledge_base.json')
+
+    while True:
+        user_input: str = input('You: ')
+
+        if user_input.lower() == 'quit':                    # if user input is 'quit'
+            break
+        elif user_input.lower() == 'list questions':        # If user input is 'list functions', call function 'list_all_questions(knowledge_base)
+            list_all_questions(knowledge_base)
+        elif user_input.lower() == 'list answers':
+            list_all_answers(knowledge_base)
+        elif user_input.lower() == 'count':
+            count_questions_and_answers(knowledge_base)
+        else:
+            best_match: Union[str, None] = find_best_match(user_input, [q["question"] for q in knowledge_base["questions"]])
 
 
 
 ------ Inspiring Codes --------
 The tutorial used Python codes beyond the scope of the syllabus. 
-I was most impressed about how the chatbot was able to understand natural language processing, when the bot matches as closely as possible to the user input.
-get_close_matches and find_best_match
+I was most impressed about how the chatbot was able to understand natural language approximation, when the bot matches as closely as possible to the user input.
+'get_close_matches' and 'find_best_match' returns a list of "good enough" matches. This means that users do not need to insert exact syntax in order for the chatbot to function.
+Spelling mistakes and typos can be tolerated to a certain extent.
 
-
+The chatbot has machine learning capabilities by storing new responses in a knowledge base. 
+Whenever the chatbot encounters a question that does not match, it will prompt the user to "teach" the robot the ideal answer: "I don't know the answer. Can you teach me?"
 
 
 ------ Interesting or Confusing Concepts --------
-
-
-
+Using a JSON file might not be intuitive for a Python user and how it operates.
+As new questions and answers are updated into the knowledge base, it automatically saves and collates the new reponses into the same JSON file.
 
 
 ------ Summary --------
-
-
-
-Chatbots main framework:
-1) Create knowledge base from a JSON file
-2) Save dictionary to knowledge base
-3) Database of historical questions and answers that are updated in real-time
-4) Finding best match from dictionary
-5) Function to answer each question
-6) Chatbot function
-
-The chatbot is able to catalogue past conversations between bot and user, in the JSON file
-When opening the chatbot again, the chatbot would withdraw from the JSON file
-The chatbot learns new responses by prompting the user to teach it.
+The chatbot is able to catalogue past conversations between bot and user, in the JSON file.
+When opening the chatbot again, the chatbot would withdraw from the knowledge base in the JSON file.
+The chatbot learns new responses by prompting the user to teach it. 
+This demonstrates a basic form of machine learning and AI learning in more advanced chatbot systems.
+Overall, this exercise combines basic Python concepts and codes, such as loops, strings and conditions, along with some creativity to thread the script together in order to create a functional chatbot. 
 

@@ -34,7 +34,8 @@ def get_answer_for_question(question: str, knowledge_base: dict) -> Union[str, N
         if q["question"] == question:                                                       # check if the current question in the loop matches the user's question
             return q["answer"]                                                              # if not match is found, function will return "None" by default
 
-# BELOW IS THE NEW, MY OWN CODES
+####### BELOW ARE MY CUSTOMISED CODES THAT I HAVE INTEGRATED WITH THE CODE FROM THE TUTORIAL #######
+
 # Display a list of questions from knowledge base
 def list_all_questions(knowledge_base: dict):                                           # extract questions list from the knowledge base
     questions = knowledge_base["questions"]
@@ -86,7 +87,7 @@ def chat_bot():                                                                 
                     save_knowledge_base('knowledge_base.json', knowledge_base)          # add new question-answer pair in knowledge base and save it
                     print('Bot: Thank you! I learned a new response!')                  # print the response message
 
-
+########### MY CUSTOMISED CODES END HERE #########################
 
 
 
